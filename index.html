@@ -9,6 +9,11 @@
     justify-content: space-evenly;
     image-rendering: high-quality;
   }
+  
+	@keyframes blink {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(0) rotate(360deg); }
+  }
 
   blockquote {
     position: absolute;
@@ -40,6 +45,7 @@
     outline: 4px dashed black;
     background-color: white;
     outline-offset: -4px;
+    box-shadow: 20px 20px 26px 0px black;
   }
 
   .center {
@@ -48,18 +54,21 @@
   }
 
   .small-gifs {
+    animation-name: blink;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
     position: auto;
     text-align: center;
   }
-  
-  .bottom-gif{
+
+  .bottom-gif {
     width: 100%;
     top: 60%;
     position: absolute;
     margin: 0 auto 0 auto;
     z-index: 1;
   }
-  
 </style>
 
 
@@ -105,12 +114,12 @@
   </section>
   <div class="bottom-gif">
     <img style="left: 15%; top: 75%;" src="https://us.v-cdn.net/6030983/uploads/editor/dr/vhgqaiqbpcx1.gif" alt="Congratulations">
-	</div>
+  </div>
 
-<div>
-  <blockquote>
-    For any questions and clarifications, please email:
-    <a href="mailto:hbansal@uchicago.edu">Harshit Bansal</a>
-  </blockquote>
+  <div>
+    <blockquote>
+      For any questions and clarifications, please email:
+      <a href="mailto:hbansal@uchicago.edu">Harshit Bansal</a>
+    </blockquote>
   </div>
 </body>
